@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 
 public class Hashmap implements iMapas {
-	HashMap hash = new HashMap();
+	HashMap<String,String> hash = new HashMap<String,String>();
 	Scanner teclado = new Scanner(System.in);
 	
 	@Override
