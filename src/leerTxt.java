@@ -16,7 +16,7 @@ public class leerTxt {
 	
 	public void abrirArchivo() {
 		try {
-			scan = new Scanner(new File("../cards_desc.txt"));
+			scan = new Scanner(new File("cards_desc.txt"));
 		}
 		 
 		catch(Exception e) {

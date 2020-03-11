@@ -1,7 +1,7 @@
 /*
  * Authors
  * @Luis Pedro Garcia 19344
- * @Christian Perez 19
+ * @Christian Perez 19710
  */
 
 import java.io.*;
@@ -71,7 +71,14 @@ public class MainCartas {
 	}
 	
 	else if(segundaDe == 2) {
-		
+		System.out.println("Ingresar nombre de la carta exacta para mostrar el tipo de carta que es");
+		String nom = scanOpcion.nextLine();
+		nom = scanOpcion.nextLine(); //error Java
+		if(mapa.mostrar(nom) != null){
+			System.out.println(mapa.mostrar(nom));
+		} else{
+			System.out.println("Esa carta no existe");
+		}
 	}
 	
 	else if(segundaDe == 3) {
@@ -147,6 +154,34 @@ public class MainCartas {
 	}
 	 
 	else if (segundaDe ==6) {
+		List<String> mounstros = new ArrayList<String>();
+		List<String> hechizos = new ArrayList<String>();
+		List<String> trampas = new ArrayList<String>();
+
+		lector.abrirArchivo();
+
+		while(lector.getScan().hasNextLine()){
+
+			String a = (lector.getScan().nextLine());
+			String[] parts = a.split("\\|");
+			if(parts[1].equalsIgnoreCase("Monstruo")){
+				mounstros.add(parts[0]);
+			} else if(parts[1].equalsIgnoreCase("Hechizo")){
+				hechizos.add(parts[0]);
+			} else if(parts[1].equalsIgnoreCase("Trampa")){
+				trampas.add(parts[0]);
+			}
+		}
+		System.out.println("Cartas de Monstruos: \n");
+		System.out.println(mounstros);
+		System.out.println("\n\n\n");
+		System.out.println("Cartas de Hechizos: \n");
+		System.out.println(hechizos);
+		System.out.println("\n\n\n");
+		System.out.println("Cartas de Trampas: \n");
+		System.out.println(trampas);
+		System.out.println("\n\n\n");
+
 		
 	}
 	 
