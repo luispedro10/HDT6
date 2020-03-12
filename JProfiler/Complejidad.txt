@@ -1,0 +1,8 @@
+Según se puede ver el el rendimiento del programa cuando se utilizan los
+diferentes tipos de Maps, se pude concluir lo siguiente:
+
+El LinkedHashMap es el que mejor rendimiento tuvo.
+El TreeMap es el que más recursos utilizó.
+El HashMap es tuvo un rendimiento promedio entre los LinkedHashMap y TreeMap
+
+Todos muestran un comportamiento de O(n).
